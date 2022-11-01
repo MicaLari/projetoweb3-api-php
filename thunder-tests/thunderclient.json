@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "5463c8c1-12d8-48bd-8f5e-9f34c434e371",
+    "colId": "075bb276-5fdc-4590-a13c-2635e933aa4f",
+    "containerId": "",
+    "name": "Estados do Brasil",
+    "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-16T19:40:01.444Z",
+    "modified": "2022-08-16T19:40:01.444Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "053224d0-89f6-4292-81fa-04c692e856cb",
+    "colId": "075bb276-5fdc-4590-a13c-2635e933aa4f",
+    "containerId": "",
+    "name": "Munipicipios por Estado",
+    "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/sp/mesorregioes",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-08-16T19:45:14.113Z",
+    "modified": "2022-08-16T19:45:14.113Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
