@@ -19,7 +19,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("INSERT INTO cadastro (name, email, pass, avatar)
+            $stmt = $conn->prepare("INSERT INTO user (name, email, pass, avatar)
             VALUES (:name, :email, :pass, :avatar)");
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':email', $this->email);
@@ -38,7 +38,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("SELECT * FROM cadastro");
+            $stmt = $conn->prepare("SELECT * FROM user");
             $stmt->execute();
             $cadastro = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $conn = null;
@@ -52,7 +52,7 @@ class User {
         $conn = Database::connect();
 
         try{
-            $stmt = $conn->prepare("SELECT * FROM cadastro WHERE id = :id;");
+            $stmt = $conn->prepare("SELECT * FROM user WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -67,7 +67,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("DELETE FROM cadastro WHERE id = :id;");
+            $stmt = $conn->prepare("DELETE FROM user WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $rowsAffected = $stmt->rowCount();
@@ -107,7 +107,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare(" SELECT id FROM cadastro WHERE email = :email AND pass = :pass");
+            $stmt = $conn->prepare(" SELECT id FROM user WHERE email = :email AND pass = :pass");
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':pass', $this->pass);
             $stmt->execute();

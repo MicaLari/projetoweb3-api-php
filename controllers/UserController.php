@@ -1,6 +1,6 @@
 <?php
 class UserController{
-    function cadastro(){
+    function user(){
         Router::allowedMethod('POST');
         
         $data = Input::getData();

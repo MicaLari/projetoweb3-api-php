@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "_id": "e23afdb4-0816-46b7-8f34-70e4861e4a6a",
+    "name": "BASE_PATH",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-11-23T17:14:22.029Z",
+    "modified": "2022-11-23T17:14:47.289Z",
+    "data": [
+      {
+        "name": "BASE_PATH",
+        "value": "http://localhost/freemovie/projetoweb3-api-php/"
+      }
+    ]
+  }
+]

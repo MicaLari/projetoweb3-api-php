@@ -26,5 +26,76 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "a56783b8-6d38-4743-908b-e24790322fa6",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "user/user",
+    "url": "{{BASE_PATH}}user/user",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-11-23T17:43:48.251Z",
+    "modified": "2022-11-23T17:43:48.251Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\":\"Micaella\",\n    \"email\":\"Micaella.l@gmail.com\",\n    \"pass\":\"12321\",\n    \"avatar\":\"mmm\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7fc2d541-df56-4ec6-9ec9-eef59db816a4",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "auth/login",
+    "url": "{{BASE_PATH}}auth/login",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-23T17:56:59.034Z",
+    "modified": "2022-11-23T17:56:59.034Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\":\"Micaella.l@gmail.com\",\n    \"pass\":\"12321\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "84430650-06e8-4387-a349-97ee07b97527",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "auth/logout",
+    "url": "{{BASE_PATH}}auth/logout",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-11-23T17:59:42.436Z",
+    "modified": "2022-11-23T17:59:42.436Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"idUser\":\"1\",\n    \"token\":\"04bfada1336ef51dbc62746ee890a669782e08ae\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7ff5b45b-5b70-4caa-ad13-3e505b369f82",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "user/list",
+    "url": "{{BASE_PATH}}user/list",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-11-23T18:02:54.498Z",
+    "modified": "2022-11-23T18:02:54.498Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
