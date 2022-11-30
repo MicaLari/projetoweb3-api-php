@@ -48,7 +48,7 @@ class User {
         }
     }
 
-    function byId(){
+    function getById(){
         $conn = Database::connect();
 
         try{
@@ -86,7 +86,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("UPDATE users SET name = :name, email = :email, avatar = :avatar WHERE id = :id;");
+            $stmt = $conn->prepare("UPDATE user SET name = :name, email = :email, avatar = :avatar WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':name', $this->name);
             $stmt->bindParam(':email', $this->email);

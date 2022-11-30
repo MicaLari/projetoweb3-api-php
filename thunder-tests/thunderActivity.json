@@ -135,5 +135,142 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "4737c81c-ef7e-44b6-a0fe-f3fb4302525c",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/delete",
+    "url": "{{BASE_PATH}}user/delete",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-11-25T18:50:09.238Z",
+    "modified": "2022-11-25T18:50:10.370Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"id\":\"1\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ac9097d5-1334-4945-a702-92984eeb34f0",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/update",
+    "url": "{{BASE_PATH}}user/update",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-11-25T19:25:17.805Z",
+    "modified": "2022-11-25T19:37:39.873Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"id\":\"3\",\n    \"name\":\"micaella\",\n    \"email\":\"micaella.ly@gmail.com\",\n    \"avatar\":\"ooo\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "aa7e5b32-71df-470d-ba88-ad8159124cfd",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/byId",
+    "url": "{{BASE_PATH}}user/byId",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-25T19:56:23.929Z",
+    "modified": "2022-11-25T19:58:00.108Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"id\":\"3\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cec1cd60-9a61-4e68-83e4-5696401b76e3",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/byId?id=3",
+    "url": "{{BASE_PATH}}user/byId?id=3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-25T20:04:43.582Z",
+    "modified": "2022-11-25T20:04:44.466Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "3",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e7376ab7-1610-43d2-9c74-8b0e74913bee",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/byId?id=2",
+    "url": "{{BASE_PATH}}user/byId?id=2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-25T20:05:35.247Z",
+    "modified": "2022-11-25T20:16:23.933Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "2ef52cf1-32fc-4ccc-8acd-3e661495961a",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/byId?id=2",
+    "url": "{{BASE_PATH}}user/byId?id=2",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-25T20:08:33.766Z",
+    "modified": "2022-11-25T20:08:33.854Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "7171e7b5-2dd4-4c4e-a943-99bdaaa8c722",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{BASE_PATH}}user/byId?id=2",
+    "url": "{{BASE_PATH}}user/byId?id=2",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-11-25T20:08:38.894Z",
+    "modified": "2022-11-25T20:08:38.912Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]

@@ -97,5 +97,63 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "6ae010cb-d902-410d-8123-171cde8d4268",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "user/delete",
+    "url": "{{BASE_PATH}}user/delete",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-11-25T18:50:36.234Z",
+    "modified": "2022-11-25T18:50:36.234Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"id\":\"1\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f361cb5e-a3c5-41fa-896d-6d995f1bd213",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "user/update",
+    "url": "{{BASE_PATH}}user/update",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2022-11-25T19:38:04.497Z",
+    "modified": "2022-11-25T19:38:04.497Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"id\":\"3\",\n    \"name\":\"micaella\",\n    \"email\":\"micaella.ly@gmail.com\",\n    \"avatar\":\"ooo\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a96d8197-7a80-4fc2-b815-ba662361fde1",
+    "colId": "1b9e7f36-8c7a-4a72-bd0a-b7d323cc6315",
+    "containerId": "",
+    "name": "user/byId?id=",
+    "url": "{{BASE_PATH}}user/byId?id=2",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-11-25T20:18:23.922Z",
+    "modified": "2022-11-25T20:18:23.922Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]

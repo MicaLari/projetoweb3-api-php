@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Set-2022 às 22:12
+-- Tempo de geração: 25-Nov-2022 às 19:41
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -18,38 +18,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `film_pj`
+-- Banco de dados: `moviefindy`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro`
+-- Estrutura da tabela `session`
 --
 
-CREATE TABLE `cadastro` (
+CREATE TABLE `session` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `email` varchar(150) DEFAULT NULL,
-  `pass` varchar(200) DEFAULT NULL,
-  `avatar` varchar(400) DEFAULT NULL
+  `id_user` int(5) NOT NULL,
+  `token` varchar(150) NOT NULL,
+  `client` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `cadastro`
---
-
-INSERT INTO `cadastro` (`id`, `name`, `email`, `pass`, `avatar`) VALUES
-(1, 'mica pobre', 'micasuperpobre3887@gmail.com', '9c4f68b698b8986a1a775fe746ecc25a58e9fad7', 'https://suap.ifsp.edu.br/media/alunos/204956.9QNMZl9xEKc2.jpg');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `cadastro`
+-- Índices para tabela `session`
 --
-ALTER TABLE `cadastro`
+ALTER TABLE `session`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,9 +49,9 @@ ALTER TABLE `cadastro`
 --
 
 --
--- AUTO_INCREMENT de tabela `cadastro`
+-- AUTO_INCREMENT de tabela `session`
 --
-ALTER TABLE `cadastro`
+ALTER TABLE `session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
