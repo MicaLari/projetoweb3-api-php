@@ -126,12 +126,12 @@
     "method": "PUT",
     "sortNum": 60000,
     "created": "2022-11-25T19:38:04.497Z",
-    "modified": "2022-11-25T19:38:04.497Z",
+    "modified": "2022-12-06T18:56:41.708Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"id\":\"3\",\n    \"name\":\"micaella\",\n    \"email\":\"micaella.ly@gmail.com\",\n    \"avatar\":\"ooo\"\n}",
+      "raw": "{\n    \"id\":\"9\",\n    \"name\":\"allan\",\n    \"email\":\"allan@gmail.com\",\n    \"avatar\":\"ooo\"\n}",
       "form": []
     },
     "tests": []

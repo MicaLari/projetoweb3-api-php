@@ -1,18 +1,18 @@
 <?php
-class User {
+class Film {
     
     private $id;
     private $name;
-    private $email;
-    private $pass;
-    private $avatar;
+    private $img;
+    private $genero;
+    private $min;
 
-    function __construct($id, $name, $email, $pass, $avatar) {
+    function __construct($id, $name, $img, $genero, $min) {
         $this->id = $id;
         $this->name = $name;
-        $this->email = $email;
-        $this->pass = $pass;
-        $this->avatar = $avatar;
+        $this->img = $img;
+        $this->genero = $genero;
+        $this->min = $min;
     }
 
     function create(){
@@ -22,9 +22,9 @@ class User {
             $stmt = $conn->prepare("INSERT INTO user (name, email, pass, avatar)
             VALUES (:name, :email, :pass, :avatar)");
             $stmt->bindParam(':name', $this->name);
-            $stmt->bindParam(':email', $this->email);
-            $stmt->bindParam(':pass', $this->pass);
-            $stmt->bindParam(':avatar', $this->avatar);
+            $stmt->bindParam(':img', $this->img);
+            $stmt->bindParam(':genero', $this->genero);
+            $stmt->bindParam(':min', $this->min);
             $stmt->execute();
             $id = $conn->lastInsertId();
             $conn = null;
@@ -38,7 +38,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("SELECT * FROM user");
+            $stmt = $conn->prepare("SELECT * FROM film");
             $stmt->execute();
             $cadastro = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $conn = null;
@@ -52,7 +52,7 @@ class User {
         $conn = Database::connect();
 
         try{
-            $stmt = $conn->prepare("SELECT * FROM user WHERE id = :id;");
+            $stmt = $conn->prepare("SELECT * FROM film WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -67,7 +67,7 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("DELETE FROM user WHERE id = :id;");
+            $stmt = $conn->prepare("DELETE FROM film WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $rowsAffected = $stmt->rowCount();
@@ -86,11 +86,12 @@ class User {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("UPDATE user SET name = :name, email = :email, avatar = :avatar WHERE id = :id;");
+            $stmt = $conn->prepare("UPDATE film SET name = :name, img = :img, genero = :genero, min = :min WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->bindParam(':name', $this->name);
-            $stmt->bindParam(':email', $this->email);
-            $stmt->bindParam(':avatar', $this->avatar);
+            $stmt->bindParam(':img', $this->img);
+            $stmt->bindParam(':genero', $this->genero);
+            $stmt->bindParam(':min', $this->min);
             $stmt->execute();
             $rowsAffected = $stmt->rowCount();
             if($rowsAffected){
@@ -102,28 +103,6 @@ class User {
             Database::dbError($e);
         }
     }
-
-    function login(){
-        $conn = Database::connect();
-        
-        try{
-            $stmt = $conn->prepare(" SELECT id FROM user WHERE email = :email AND pass = :pass");
-            $stmt->bindParam(':email', $this->email);
-            $stmt->bindParam(':pass', $this->pass);
-            $stmt->execute();
-
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            if(is_array($user)){
-                return $user['id'];
-            } else {
-                return false;
-            }
-        }catch(PDOException $e) {
-            Database::dbError($e);
-        }
-    }
-
-
 
 }
 
