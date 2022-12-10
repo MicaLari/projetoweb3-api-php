@@ -1,6 +1,6 @@
 <?php
 // PATHS and FOLDERS
-define('BASE_PATH','/freemovie/projetoweb3-api-php/');
+define('BASE_PATH','/freemovies/projetoweb3-api-php/');
 define('CONTROLLERS_FOLDER','controllers/');
 define('HELPERS_FOLDER','helpers/');
 define('MODELS_FOLDER','models/');

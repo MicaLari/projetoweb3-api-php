@@ -2,14 +2,14 @@
 class Film {
     
     private $id;
-    private $name;
+    private $nome;
     private $img;
     private $genero;
     private $min;
 
-    function __construct($id, $name, $img, $genero, $min) {
+    function __construct($id, $nome, $img, $genero, $min) {
         $this->id = $id;
-        $this->name = $name;
+        $this->nome = $nome;
         $this->img = $img;
         $this->genero = $genero;
         $this->min = $min;
@@ -19,9 +19,9 @@ class Film {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("INSERT INTO user (name, email, pass, avatar)
-            VALUES (:name, :email, :pass, :avatar)");
-            $stmt->bindParam(':name', $this->name);
+            $stmt = $conn->prepare("INSERT INTO film (id, nome, img, gener, min)
+            VALUES (:nome, :img, :genero, :min)");
+            $stmt->bindParam(':nome', $this->nome);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':genero', $this->genero);
             $stmt->bindParam(':min', $this->min);
@@ -88,7 +88,7 @@ class Film {
         try{
             $stmt = $conn->prepare("UPDATE film SET name = :name, img = :img, genero = :genero, min = :min WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
-            $stmt->bindParam(':name', $this->name);
+            $stmt->bindParam(':name', $this->nome);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':genero', $this->genero);
             $stmt->bindParam(':min', $this->min);

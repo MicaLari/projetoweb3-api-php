@@ -1,33 +1,33 @@
 <?php
-class UserController{
-    function user(){
+class FilmController{
+    function create(){
         Router::allowedMethod('POST');
         
         $data = Input::getData();
-        $name = $data['name'];
-        $email = $data['email'];
-        $pass = sha1($data['pass']);
-        $avatar = $data['avatar'];
+        $nome = $data['nome'];
+        $img = $data['img'];
+        $genero = $data['genero'];
+        $min = $data['min'];
 
         //TODO validar os campos
 
-        $user = new User(null, $name, $email, $pass, $avatar);
+        $user = new Film(null, $nome, $img, $genero, $min);
         $id = $user->create();
 
-        $result["success"]["message"] = "User created successfully!";
-        $result["user"] = $data;
-        $result["user"]["id"] = $id;
+        $result["success"]["message"] = "Film created successfully!";
+        $result["film"] = $data;
+        $result["film"]["id"] = $id;
         Output::response($result);
     }
 
     function list(){
         Router::allowedMethod('GET');
 
-        $user = new User(null, null, null, null, null);
-        $listUsers = $user->list();
+        $film = new Film(null, null, null, null, null);
+        $listFilms = $film->list();
 
-        $result["success"]["message"] = "User list has been successfully listed!";
-        $result["data"] = $listUsers;
+        $result["success"]["message"] = "Film list has been successfully listed!";
+        $result["data"] = $listFilms;
         Output::response($result);
     }
 
@@ -41,7 +41,7 @@ class UserController{
             Output::response($result, 406);
         }
         
-        $user = new User($id, null, null, null, null);
+        $user = new Film($id, null, null, null, null);
         $userData = $user->getById();
 
         if($userData){
@@ -65,7 +65,7 @@ class UserController{
             Output::response($result, 406);
         }
 
-        $user = new User($id, null, null, null, null);
+        $user = new Film($id, null, null, null, null);
         $deleted = $user->delete();
 
         if($deleted){
@@ -82,21 +82,22 @@ class UserController{
         
         $data = Input::getData();
         $id = $data['id'];
-        $name = $data['name'];
-        $email = $data['email'];
-        $avatar = $data['avatar'];
+        $nome = $data['nome'];
+        $img = $data['img'];
+        $genero = $data['ganero'];
+        $min = $data['min'];
 
         
         
-        $user = new User($id, $name, $email, null, $avatar);
-        $updated = $user->update();
+        $user = new Film($id, $nome, $img ,$genero, $min);
+        $updated = $film->update();
 
         if($updated){
-            $result["success"]["message"] = "User updated successfully!";
-            $result["user"] = $data;
+            $result["success"]["message"] = "Film updated successfully!";
+            $result["film"] = $data;
             Output::response($result);
         } else {
-            $result["error"]["message"] = "User $id not found to be updated!";
+            $result["error"]["message"] = "Film $id not found to be updated!";
             Output::response($result, 404);
         }
     }
