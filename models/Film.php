@@ -19,7 +19,7 @@ class Film {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("INSERT INTO film (id, nome, img, gener, min)
+            $stmt = $conn->prepare("INSERT INTO film ( nome, img, genero, min )
             VALUES (:nome, :img, :genero, :min)");
             $stmt->bindParam(':nome', $this->nome);
             $stmt->bindParam(':img', $this->img);
@@ -86,9 +86,9 @@ class Film {
         $conn = Database::connect();
         
         try{
-            $stmt = $conn->prepare("UPDATE film SET name = :name, img = :img, genero = :genero, min = :min WHERE id = :id;");
+            $stmt = $conn->prepare("UPDATE film SET nome = :nome, img = :img, genero = :genero, min = :min WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
-            $stmt->bindParam(':name', $this->nome);
+            $stmt->bindParam(':nome', $this->nome);
             $stmt->bindParam(':img', $this->img);
             $stmt->bindParam(':genero', $this->genero);
             $stmt->bindParam(':min', $this->min);

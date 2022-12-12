@@ -5,11 +5,11 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-11-23T17:14:22.029Z",
-    "modified": "2022-11-23T17:14:47.289Z",
+    "modified": "2022-12-12T19:17:10.254Z",
     "data": [
       {
         "name": "BASE_PATH",
-        "value": "http://localhost/freemovie/projetoweb3-api-php/"
+        "value": "http://localhost/freemovies/projetoweb3-api-php/"
       }
     ]
   }

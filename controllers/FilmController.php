@@ -23,8 +23,8 @@ class FilmController{
     function list(){
         Router::allowedMethod('GET');
 
-        $film = new Film(null, null, null, null, null);
-        $listFilms = $film->list();
+        $user = new Film(null, null, null, null, null);
+        $listFilms = $user->list();
 
         $result["success"]["message"] = "Film list has been successfully listed!";
         $result["data"] = $listFilms;
@@ -69,10 +69,10 @@ class FilmController{
         $deleted = $user->delete();
 
         if($deleted){
-            $result["success"]["message"] = "User $id deleted successfully!";
+            $result["success"]["message"] = "Film $id deleted successfully!";
             Output::response($result);
         } else {
-            $result["error"]["message"] = "User $id not found to be deleted!";
+            $result["error"]["message"] = "Film $id not found to be deleted!";
             Output::response($result, 404);
         }
     }
@@ -84,13 +84,13 @@ class FilmController{
         $id = $data['id'];
         $nome = $data['nome'];
         $img = $data['img'];
-        $genero = $data['ganero'];
+        $genero = $data['genero'];
         $min = $data['min'];
 
         
         
         $user = new Film($id, $nome, $img ,$genero, $min);
-        $updated = $film->update();
+        $updated = $user->update();
 
         if($updated){
             $result["success"]["message"] = "Film updated successfully!";
